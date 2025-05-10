@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2wunxrfub0b5"]
+[gd_scene load_steps=6 format=3 uid="uid://c2wunxrfub0b5"]
 
 [ext_resource type="Script" uid="uid://cc4j7ho3mbhm4" path="res://explosio.gd" id="1_tgi0m"]
+[ext_resource type="AudioStream" uid="uid://y04w8eh4ae5r" path="res://large-underwater-explosion-190270.mp3" id="2_epp4v"]
 
 [sub_resource type="Curve" id="Curve_rorrr"]
 _data = [Vector2(0.0625, 1), 0.0, 0.0, 0, 0, Vector2(0.99999, 0.561798), 0.0, 0.0, 0, 0]
@@ -45,3 +46,7 @@ scale_amount_curve = SubResource("Curve_rorrr")
 color = Color(0.929412, 0.356863, 0.054902, 1)
 color_ramp = SubResource("Gradient_tgi0m")
 hue_variation_curve = SubResource("Curve_epp4v")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(401, 240)
+stream = ExtResource("2_epp4v")
